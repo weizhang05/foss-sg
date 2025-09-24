@@ -55,7 +55,7 @@ export default function Template() {
                         <Group>
                             <Group>
                                 <Image
-                                    src={"/ossg_logo_big.png"}
+                                    src={"./ossg_logo_big.png"}
                                     h={70}
                                     fit="contain"
                                 />
@@ -96,7 +96,7 @@ export default function Template() {
                             visibleFrom="sm"
                         >
                             <Image
-                                src={"/ossg_logo_big.png"}
+                                src={"./ossg_logo_big.png"}
                                 h={70}
                                 fit="contain"
                             />
@@ -141,7 +141,7 @@ export default function Template() {
                                 justify="flex-start"
                             >
                                 <Image
-                                    src={"/ossg_logo_big.png"}
+                                    src={"./ossg_logo_big.png"}
                                     h={70}
                                     fit="contain"
                                 />
@@ -211,7 +211,7 @@ export default function Template() {
                             display: 'inline-block',
                             verticalAlign: 'middle'
                         }}
-                        src={"/ossg_logo_big.png"}
+                        src={"./ossg_logo_big.png"}
                         h={'auto'}
                         w={50}
                         fit="contain"
