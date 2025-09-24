@@ -11,8 +11,8 @@ import {
     ThemeIcon,
     Center,
 } from '@mantine/core';
-import {IconBrandDiscord, IconSpeakerphone} from "@tabler/icons-react";
-import {Link} from "react-router";
+import {IconBrandDiscord} from "@tabler/icons-react";
+// import {Link} from "react-router";
 
 export default function OSSGLanding() {
     const features = [
@@ -204,14 +204,14 @@ export default function OSSGLanding() {
                             source community.
                         </Text>
                         <Group justify="center" gap="md">
-                            <Button
-                                rightSection={<IconSpeakerphone/>}
-                                color={"#c92a2a"}
-                                component={Link}
-                                to={"/be-a-speaker"}
-                            >
-                                Be a Speaker!
-                            </Button>
+                            {/*<Button*/}
+                            {/*    rightSection={<IconSpeakerphone/>}*/}
+                            {/*    color={"#c92a2a"}*/}
+                            {/*    component={Link}*/}
+                            {/*    to={"/be-a-speaker"}*/}
+                            {/*>*/}
+                            {/*    Be a Speaker!*/}
+                            {/*</Button>*/}
                             <Button
                                 rightSection={<IconBrandDiscord/>}
                                 color="#5f3dc4"
