@@ -1,8 +1,8 @@
 import {useState} from 'react';
-import {Box, Burger, Button, Container, Flex, Group, Image, Menu, NavLink, Text, Title} from '@mantine/core';
+import {Box, Burger, Button, Container, Flex, Group, Image, Menu, NavLink, Text} from '@mantine/core';
 import {useDisclosure} from '@mantine/hooks';
 import {Link, Outlet} from 'react-router';
-import {IconBrandDiscord, IconCalendarEvent, IconHome, IconSpeakerphone, IconUsersGroup} from '@tabler/icons-react';
+import {IconBrandDiscord, IconCalendarEvent, IconSpeakerphone, IconUsersGroup} from '@tabler/icons-react';
 import {useMediaQuery} from '@mantine/hooks';
 
 const links = [
@@ -33,6 +33,7 @@ export default function Template() {
             onClick={() => setActive(link.link)}
             style={{
                 width: "fit-content",
+                display:'none',
             }}
         />
     ))
@@ -106,7 +107,7 @@ export default function Template() {
                             style={{flexGrow: 1}}
                             visibleFrom="xs"
                         >
-                            {/*{items}*/}
+                            {items}
                         </Group>
                         <Group visibleFrom="sm">
                             <Button

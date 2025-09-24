@@ -7,8 +7,8 @@ import '@mantine/core/styles.css';
 import {MantineProvider} from '@mantine/core';
 import {HashRouter, Route, Routes} from 'react-router';
 import Template from './Template.tsx';
-import About from './About.tsx';
-import Events from './Events.tsx';
+// import About from './About.tsx';
+// import Events from './Events.tsx';
 import SpeakerForm from './SpeakerForm.tsx';
 
 createRoot(document.getElementById('root')!).render(
