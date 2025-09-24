@@ -51,42 +51,55 @@ export default function Template() {
                 <Container h={"inherit"}>
                     {
                         isSm &&
-                        <Group
-                            justify="flex-end"
-                            style={{flexGrow: 1}}
-                        >
-                            <Button
-                                rightSection={<IconSpeakerphone/>}
-                                color={beAspeakerColor}
-                                component={Link}
-                                to={"/be-a-speaker"}
-                                onClick={() => setActive("")}
-                                style={{marginRight: 20}}
+                        <Group>
+                            <Group>
+                                <Image
+                                    src={"/ossg_logo_big.png"}
+                                    h={70}
+                                    fit="contain"
+                                />
+                            </Group>
+                            <Group
+                                justify="flex-end"
+                                style={{flexGrow: 1}}
                             >
-                                Be a Speaker!
-                            </Button>
-                            <Button
-                                rightSection={<IconBrandDiscord/>}
-                                color={joinDiscordColor}
-                                component="a"
-                                href="https://discord.gg/mgBwDvkkn8"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                visibleFrom="sm"
-                            >
-                                Join Discord
-                            </Button>
+                                <Button
+                                    rightSection={<IconSpeakerphone/>}
+                                    color={beAspeakerColor}
+                                    component={Link}
+                                    to={"/be-a-speaker"}
+                                    onClick={() => setActive("")}
+                                    style={{marginRight: 20}}
+                                >
+                                    Be a Speaker!
+                                </Button>
+                                <Button
+                                    rightSection={<IconBrandDiscord/>}
+                                    color={joinDiscordColor}
+                                    component="a"
+                                    href="https://discord.gg/mgBwDvkkn8"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    Join Discord
+                                </Button>
+                            </Group>
                         </Group>
                     }
 
-                    <Flex h={"inherit"} align={"center"}>
-                        <Title order={3}>
+                    <Flex
+                        h={"inherit"}
+                        align={"center"}
+                    >
+                        <Group
+                            visibleFrom="sm"
+                        >
                             <Image
                                 src={"/ossg_logo_big.png"}
                                 h={70}
                                 fit="contain"
                             />
-                        </Title>
+                        </Group>
 
                         <Group
                             justify="flex-end"
@@ -118,50 +131,67 @@ export default function Template() {
                         </Group>
 
                         <Group
-                            justify="flex-end"
-                            style={{flexGrow: 1}}
                             hiddenFrom="xs"
+                            style={{
+                                flexGrow: 1,
+                            }}
                         >
-                            <Menu opened={menuOpened} onChange={setMenuOpened} shadow="md" width={200}>
-                                <Menu.Target>
-                                    <Burger opened={opened} onClick={toggle} size="sm"/>
-                                </Menu.Target>
+                            <Group
+                                justify="flex-start"
+                            >
+                                <Image
+                                    src={"/ossg_logo_big.png"}
+                                    h={70}
+                                    fit="contain"
+                                />
+                            </Group>
+                            <Group
+                                style={{
+                                    flexGrow: 1,
+                                }}
+                                justify="flex-end"
+                            >
+                                <Menu opened={menuOpened} onChange={setMenuOpened} shadow="md" width={200}>
+                                    <Menu.Target>
+                                        <Burger opened={opened} onClick={toggle} size="sm"/>
+                                    </Menu.Target>
 
-                                <Menu.Dropdown>
-                                    {
-                                        links.map((link) => (
-                                            <Menu.Item
-                                                key={link.label}
-                                                component={Link}
-                                                to={link.link}
-                                                leftSection={link.icon}
-                                                onClick={() => setActive(link.link)}
-                                            >
-                                                {link.label}
-                                            </Menu.Item>
-                                        ))
-                                    }
-                                    <Menu.Divider/>
-                                    <Menu.Item
-                                        color={beAspeakerColor}
-                                        leftSection={<IconSpeakerphone/>}
-                                        component={Link}
-                                        to={"/be-a-speaker"}
-                                    >
-                                        Be a Speaker!
-                                    </Menu.Item>
-                                    <Menu.Item
-                                        color={joinDiscordColor}
-                                        leftSection={<IconBrandDiscord/>}
-                                        component="a"
-                                        href="https://discord.gg/mgBwDvkkn8"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                    >
-                                        Join Discord
-                                    </Menu.Item>
-                                </Menu.Dropdown>
-                            </Menu>
+                                    <Menu.Dropdown>
+                                        {/*{*/}
+                                        {/*    links.map((link) => (*/}
+                                        {/*        <Menu.Item*/}
+                                        {/*            key={link.label}*/}
+                                        {/*            component={Link}*/}
+                                        {/*            to={link.link}*/}
+                                        {/*            leftSection={link.icon}*/}
+                                        {/*            onClick={() => setActive(link.link)}*/}
+                                        {/*        >*/}
+                                        {/*            {link.label}*/}
+                                        {/*        </Menu.Item>*/}
+                                        {/*    ))*/}
+                                        {/*}*/}
+                                        {/*<Menu.Divider/>*/}
+                                        <Menu.Item
+                                            color={beAspeakerColor}
+                                            leftSection={<IconSpeakerphone/>}
+                                            component={Link}
+                                            to={"/be-a-speaker"}
+                                        >
+                                            Be a Speaker!
+                                        </Menu.Item>
+                                        <Menu.Item
+                                            color={joinDiscordColor}
+                                            leftSection={<IconBrandDiscord/>}
+                                            component="a"
+                                            href="https://discord.gg/mgBwDvkkn8"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            Join Discord
+                                        </Menu.Item>
+                                    </Menu.Dropdown>
+                                </Menu>
+                            </Group>
                         </Group>
                     </Flex>
                 </Container>

@@ -98,6 +98,7 @@ export default function OSSGLanding() {
                                 gradient={{from: '#c92a2a', to: '#5f3dc4', deg: 90}}
                                 fz={{base: "3.5rem", md: "5rem"}}
                                 fw={800}
+                                ta={{base: "center", md: "left"}}
                             >
                                 Open Source Singapore
                             </Text>
@@ -208,7 +209,6 @@ export default function OSSGLanding() {
                                 color={"#c92a2a"}
                                 component={Link}
                                 to={"/be-a-speaker"}
-                                visibleFrom="sm"
                             >
                                 Be a Speaker!
                             </Button>
@@ -219,7 +219,6 @@ export default function OSSGLanding() {
                                 href="https://discord.gg/mgBwDvkkn8"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                visibleFrom="sm"
                             >
                                 Join Discord
                             </Button>
