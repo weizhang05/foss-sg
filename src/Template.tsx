@@ -2,7 +2,7 @@ import {useState} from 'react';
 import {Box, Burger, Button, Container, Flex, Group, Image, Menu, NavLink, Text} from '@mantine/core';
 import {useDisclosure} from '@mantine/hooks';
 import {Link, Outlet} from 'react-router';
-import {IconBrandDiscord, IconCalendarEvent, IconSpeakerphone, IconUsersGroup} from '@tabler/icons-react';
+import {IconBrandDiscord, IconCalendarEvent, IconUsersGroup} from '@tabler/icons-react';
 import {useMediaQuery} from '@mantine/hooks';
 
 const links = [
@@ -18,7 +18,7 @@ export default function Template() {
 
     const isSm = useMediaQuery('(min-width: 576px) and (max-width: 767px)');
 
-    const beAspeakerColor: string = "#c92a2a";
+    // const beAspeakerColor: string = "#c92a2a";
     const joinDiscordColor: string = "#5f3dc4";
 
     const items = links.map((link) => (
@@ -64,16 +64,16 @@ export default function Template() {
                                 justify="flex-end"
                                 style={{flexGrow: 1}}
                             >
-                                <Button
-                                    rightSection={<IconSpeakerphone/>}
-                                    color={beAspeakerColor}
-                                    component={Link}
-                                    to={"/be-a-speaker"}
-                                    onClick={() => setActive("")}
-                                    style={{marginRight: 20}}
-                                >
-                                    Be a Speaker!
-                                </Button>
+                                {/*<Button*/}
+                                {/*    rightSection={<IconSpeakerphone/>}*/}
+                                {/*    color={beAspeakerColor}*/}
+                                {/*    component={Link}*/}
+                                {/*    to={"/be-a-speaker"}*/}
+                                {/*    onClick={() => setActive("")}*/}
+                                {/*    style={{marginRight: 20}}*/}
+                                {/*>*/}
+                                {/*    Be a Speaker!*/}
+                                {/*</Button>*/}
                                 <Button
                                     rightSection={<IconBrandDiscord/>}
                                     color={joinDiscordColor}
@@ -110,15 +110,15 @@ export default function Template() {
                             {items}
                         </Group>
                         <Group visibleFrom="sm">
-                            <Button
-                                rightSection={<IconSpeakerphone/>}
-                                color={beAspeakerColor}
-                                component={Link}
-                                to={"/be-a-speaker"}
-                                onClick={() => setActive("")}
-                            >
-                                Be a Speaker!
-                            </Button>
+                            {/*<Button*/}
+                            {/*    rightSection={<IconSpeakerphone/>}*/}
+                            {/*    color={beAspeakerColor}*/}
+                            {/*    component={Link}*/}
+                            {/*    to={"/be-a-speaker"}*/}
+                            {/*    onClick={() => setActive("")}*/}
+                            {/*>*/}
+                            {/*    Be a Speaker!*/}
+                            {/*</Button>*/}
                             <Button
                                 rightSection={<IconBrandDiscord/>}
                                 color={joinDiscordColor}
@@ -172,14 +172,14 @@ export default function Template() {
                                         {/*    ))*/}
                                         {/*}*/}
                                         {/*<Menu.Divider/>*/}
-                                        <Menu.Item
-                                            color={beAspeakerColor}
-                                            leftSection={<IconSpeakerphone/>}
-                                            component={Link}
-                                            to={"/be-a-speaker"}
-                                        >
-                                            Be a Speaker!
-                                        </Menu.Item>
+                                        {/*<Menu.Item*/}
+                                        {/*    color={beAspeakerColor}*/}
+                                        {/*    leftSection={<IconSpeakerphone/>}*/}
+                                        {/*    component={Link}*/}
+                                        {/*    to={"/be-a-speaker"}*/}
+                                        {/*>*/}
+                                        {/*    Be a Speaker!*/}
+                                        {/*</Menu.Item>*/}
                                         <Menu.Item
                                             color={joinDiscordColor}
                                             leftSection={<IconBrandDiscord/>}
